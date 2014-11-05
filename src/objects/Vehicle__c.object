@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>false</enableActivities>
-    <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <enableReports>false</enableReports>
     <fields>
         <fullName>Automatic_Id__c</fullName>
         <caseSensitive>true</caseSensitive>
@@ -49,46 +13,33 @@
     </fields>
     <fields>
         <fullName>Average_Distance_Trip__c</fullName>
-        <externalId>false</externalId>
         <formula>Total_Distance_Driven__c /  Total_Trips_Taken__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Average Distance/Trip</label>
         <precision>18</precision>
-        <required>false</required>
         <scale>4</scale>
         <type>Number</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Color__c</fullName>
-        <externalId>false</externalId>
         <label>Color</label>
         <length>255</length>
-        <required>false</required>
         <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Make__c</fullName>
-        <externalId>false</externalId>
         <label>Make</label>
         <length>255</length>
-        <required>false</required>
         <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Model__c</fullName>
-        <externalId>false</externalId>
         <label>Model</label>
         <length>255</length>
-        <required>false</required>
         <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Total_Distance_Driven__c</fullName>
-        <externalId>false</externalId>
         <label>Total Distance Driven</label>
         <summarizedField>Trip__c.Distance_Miles__c</summarizedField>
         <summaryForeignKey>Trip__c.Vehicle__c</summaryForeignKey>
@@ -97,7 +48,6 @@
     </fields>
     <fields>
         <fullName>Total_Trips_Taken__c</fullName>
-        <externalId>false</externalId>
         <label>Total Trips Taken</label>
         <summaryForeignKey>Trip__c.Vehicle__c</summaryForeignKey>
         <summaryOperation>count</summaryOperation>
@@ -105,12 +55,9 @@
     </fields>
     <fields>
         <fullName>Year__c</fullName>
-        <externalId>false</externalId>
         <label>Year</label>
         <length>4</length>
-        <required>false</required>
         <type>Text</type>
-        <unique>false</unique>
     </fields>
     <label>Vehicle</label>
     <listViews>

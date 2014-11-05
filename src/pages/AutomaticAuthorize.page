@@ -3,11 +3,19 @@
 	<div class="bs">
 		<div class="container pull-left">
 			<img src="{!URLFOR($Resource.autoAssets, 'Automatic_Logo.png')}" style="width:200px;"/>
-			<p>
-				Click "Authorize" below to be directed to the Automatic site, where you will log in and grant access to your Automatic account.
-			</p>
-			<apex:form>
-				<apex:commandButton styleClass="btn btn-primary" action="{!doRedirect}" value="Authorize"/>
+			<apex:form >
+                <p>
+                    <apex:outputText rendered="{!accessTokenIsValid}" value="Valid access token" />
+                    <apex:outputText rendered="{!NOT(accessTokenIsValid)}" style="color: red;" value="No valid access token" />
+                </p>
+                <p>
+                    Click "Authorize" to be directed to the Automatic site, where you will log in and grant access to your Automatic account.
+                </p>
+                <p>
+                    Click "Update Trips" to retrieve past trip data from the Automatic site.
+                </p>
+				<apex:commandButton styleClass="btn" action="{!doRedirect}" value="Authorize"/>&nbsp;
+				<apex:commandButton styleClass="btn" disabled="{!NOT(accessTokenIsValid)}" action="{!updateTrips}" value="Update Trips"/>
 			</apex:form>
 		</div>
 	</div>

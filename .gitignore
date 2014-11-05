@@ -3,3 +3,4 @@ debug/
 deploy/
 /objects/
 *.sublime*
+.DS_Store
