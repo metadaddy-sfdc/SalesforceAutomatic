@@ -6,10 +6,10 @@ public with sharing class AutomaticAuthorizeCtrl {
     private String accessToken {get; set;}
     
     private static AutomaticAPI__c settings = AutomaticAPI__c.getInstance();
-    private static String authProviderId   = settings.authProviderId__c;
-    private static String authProviderName = settings.authProviderName__c;
-    private static String authProviderType = settings.authProviderType__c;
-    
+    private static String authProviderId   = settings.authProviderId__c;   // e.g. '0SOE00000001234'
+    private static String authProviderName = settings.authProviderName__c; // e.g. 'Automatic'
+    private static String authProviderType = settings.authProviderType__c; // e.g. 'Open ID Connect'    
+
 	public AutomaticAuthorizeCtrl() {
 		accessToken = Auth.AuthToken.getAccessToken(authProviderId, authProviderType);
         System.debug('Access token: '+accessToken);
